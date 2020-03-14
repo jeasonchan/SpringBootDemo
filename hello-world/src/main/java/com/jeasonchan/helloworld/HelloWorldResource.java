@@ -39,6 +39,16 @@ public class HelloWorldResource {
     请求体，使用  RequestBody  注解，和javax中的body不兼容
     请求头，使用 RequestHeader 注解，包含客户端类型、token等参数，使用的方式有多种
 
+    =============================
+    编译配置
+
+
+
+
+    =============================
+    启动配置
+
+
 
      */
 }
