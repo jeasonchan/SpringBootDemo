@@ -62,6 +62,7 @@
         </dependency>
     </dependencies>
 
+<!--    将项目打包为一个可执行的jar包-->
     <build>
         <plugins>
             <plugin>

@@ -2,7 +2,7 @@
 
 ## 模块计划(已完成：54 / 66)
 
-- [ ] spring-boot-demo-helloworld（Helloworld 示例）
+- [x] spring-boot-demo-helloworld（Helloworld 示例）
 - [ ] spring-boot-demo-properties（读取配置文件信息）
 - [ ] spring-boot-demo-actuator（对 Spring boot 的端点监控）
 - [ ] spring-boot-demo-admin-client（对 Spring boot 可视化管控 客户端）

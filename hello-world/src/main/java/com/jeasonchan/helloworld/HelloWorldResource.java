@@ -41,14 +41,18 @@ public class HelloWorldResource {
 
     =============================
     编译配置
-    使用mvn编译
+
+    使用mvn编译，即为，使用maven的  spring-boot-maven-plugin 插件，将项目打包为jar包
+    这一步数属于CI流水线负责
 
 
 
 
     =============================
     启动配置
-    启动使用mvn生成的jar包
+
+    使用编译打包的jar，直接使用java -jar  name.jar 运行jar包
+    启动部署这一步，有时候直接使用java -jar命令在本机启动，有时候选需要放到容器里面运行
 
 
      */
