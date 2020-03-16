@@ -65,7 +65,7 @@ public class ReadPropertyController {
 
 
     //===============================================================
-
+    //尝试获取applicationContext，并从ioc中获取bean对象
     @GetMapping(path = "/SpringUtil")
     public DevelopProperty getDevelopProperty() {
         return (DevelopProperty) SpringUtil.getBeanByName("developProperty");
