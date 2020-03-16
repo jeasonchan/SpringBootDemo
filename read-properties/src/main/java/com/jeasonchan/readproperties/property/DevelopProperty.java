@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component;
 
 @Getter
 @Setter
-@Component
+@Component("developProperty")
 @ConfigurationProperties(prefix = "developer")
-//直接使用的application.yml，
-// 不需要使用@PropertySource(value = {"classpath:person.yaml"}) 指定额外的配置文件来源
+// 因为，直接使用的application.yml 作为配置文件，
+// 所以，不需要使用@PropertySource(value = {"classpath:person.yaml"}) 指定额外的配置文件来源
 public class DevelopProperty {
     private String name;
     private String website;

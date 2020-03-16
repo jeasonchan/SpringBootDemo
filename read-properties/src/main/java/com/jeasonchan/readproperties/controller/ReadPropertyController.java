@@ -2,6 +2,7 @@ package com.jeasonchan.readproperties.controller;
 
 import com.jeasonchan.readproperties.property.ApplicationProperty;
 import com.jeasonchan.readproperties.property.DevelopProperty;
+import com.jeasonchan.readproperties.util.SpringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -59,6 +60,25 @@ public class ReadPropertyController {
     因此，application和developer两个配置实例的数据也可能拿到
 
 
+
+     */
+
+
+    //===============================================================
+
+    @GetMapping(path = "/SpringUtil")
+    public DevelopProperty getDevelopProperty() {
+        return (DevelopProperty) SpringUtil.getBeanByName("developProperty");
+    }
+
+    /*
+    通过以上方式，先获取applicationContext，再通过先获取applicationContext获取IOC中的实例，
+    要点的有：
+    1、写一个类，能被注入到IOC中，且是实现了ApplicationContextAware接口
+    2、被获取的类也同样能够被注入到IOC中
+
+     最简单、主流的注入方式无非是@component  和
+     @configutation(使用java类作为装配方式) + @bean（方法名即为bean的名称）
 
      */
 }
