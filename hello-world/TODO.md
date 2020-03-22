@@ -8,6 +8,8 @@
 
 - [ ] spring-boot-demo-actuator（对 Spring boot 的端点监控）
 
+  通过管理url访问该服务的映射列表、IOC中可用的组件实例（beans）
+
 - [ ] spring-boot-demo-admin-client（对 Spring boot 可视化管控 客户端）
 
   client可以是任意一个服务应用，在配置文件中配置参数后，向server端上报自己的状态信息
@@ -19,6 +21,8 @@
 - [ ] spring-boot-demo-logback（集成 logback 日志）
 
 - [ ] spring-boot-demo-log-aop（使用 AOP 拦截请求日志信息）
+
+  
 
 - [ ] spring-boot-demo-exception-handler（统一异常处理）
 
