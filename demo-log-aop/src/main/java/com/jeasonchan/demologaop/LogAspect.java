@@ -35,7 +35,7 @@ public class LogAspect {
     public void doBefore(JoinPoint joinPoint) {
 
         //获取网络请求对象
-        RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();//该方法能返回该线程的传入参数
+        RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();//该方法能返回该线程的传入参 数
         ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes) requestAttributes;
 
         HttpServletRequest httpServletRequest = Objects.requireNonNull(servletRequestAttributes).getRequest();
