@@ -15,6 +15,7 @@
         <module>demo-log-aop</module>
         <module>read-properties</module>
         <module>hello-world</module>
+        <module>daily-exercise</module>
 
     </modules>
 

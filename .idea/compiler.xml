@@ -6,15 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo-log-aop" />
         <module name="hello-world" />
-        <module name="read-properties" />
+        <module name="demo-log-aop" />
         <module name="aop-exercise" />
-        <module name="hello-world (1)" />
+        <module name="read-properties" />
+        <module name="daily-exercise" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="aop-exercise" target="1.8" />
+      <module name="daily-exercise" target="1.8" />
       <module name="demo-log-aop" target="1.8" />
       <module name="hello-world" target="1.8" />
       <module name="hello-world (1)" target="1.8" />
@@ -25,6 +26,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="aop-exercise" options="-parameters" />
+      <module name="daily-exercise" options="-parameters" />
       <module name="demo-log-aop" options="-parameters" />
       <module name="hello-world" options="-parameters" />
       <module name="hello-world (1)" options="-parameters" />
