@@ -34,11 +34,7 @@ import java.util.*;
 class Solution {
     public List<Integer> rightSideView(TreeNode root) {
         if (null == root) {
-            return new ArrayList<Integer>() {
-                {
-                    this.add(null);
-                }
-            };
+            return new ArrayList<Integer>() ;
 
         }
 
@@ -51,10 +47,19 @@ class Solution {
         while (!queue.isEmpty()) {
             TreeNode topNode = queue.poll();
             int distanceFromRoot = record.get(topNode);
-            queue.add(topNode.right);
-            queue.add(topNode.left);
-            record.put(topNode.right, distanceFromRoot + 1);
-            record.put(topNode.left, distanceFromRoot + 1);
+
+            if (null != topNode.right) {
+                queue.add(topNode.right);
+                record.put(topNode.right, distanceFromRoot + 1);
+
+            }
+
+            if (null != topNode.left) {
+                queue.add(topNode.left);
+                record.put(topNode.left, distanceFromRoot + 1);
+
+            }
+
         }
 
         int currentDistance = 0;
