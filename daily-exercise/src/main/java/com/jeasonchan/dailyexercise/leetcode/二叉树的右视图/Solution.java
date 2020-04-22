@@ -31,6 +31,7 @@ import java.util.*;
 
 @SuppressWarnings("unchecked")
 @Component("Solution199")
+public
 class Solution {
     public List<Integer> rightSideView(TreeNode root) {
         if (null == root) {
