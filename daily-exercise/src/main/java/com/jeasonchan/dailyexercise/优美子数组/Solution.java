@@ -1,6 +1,8 @@
 package com.jeasonchan.dailyexercise.优美子数组;
 
 
+import org.springframework.stereotype.Component;
+
 /*
 给你一个整数数组 nums 和一个整数 k。
 
@@ -59,5 +61,6 @@ class Solution {
         }
 
 
+        return 0;
     }
 }
