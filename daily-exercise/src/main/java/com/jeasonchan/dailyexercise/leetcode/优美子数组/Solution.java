@@ -1,4 +1,4 @@
-package com.jeasonchan.dailyexercise.优美子数组;
+package com.jeasonchan.dailyexercise.leetcode.优美子数组;
 
 
 import org.springframework.stereotype.Component;

@@ -2,6 +2,7 @@ package com.jeasonchan.dailyexercise;
 
 import com.jeasonchan.dailyexercise.bean.MySqlInfo;
 import com.jeasonchan.dailyexercise.bean.SpringConfiguration;
+import com.jeasonchan.dailyexercise.database.MyJdbcTemplate;
 import com.jeasonchan.dailyexercise.leetcode.二叉树的右视图.Solution;
 import com.jeasonchan.dailyexercise.util.SpringUtil;
 import org.springframework.boot.SpringApplication;
@@ -19,8 +20,20 @@ public class DailyExerciseApplication {
         SpringConfiguration springConfiguration = (SpringConfiguration) SpringUtil.getBeanByName("springConfiguration");
         System.out.println(springConfiguration);
 
+        /*
+
         Solution solution = (Solution) SpringUtil.getBeanByName("Solution199");
         System.out.println(solution.rightSideView(null));
+
+        */
+
+
+        MyJdbcTemplate myJdbcTemplate = (MyJdbcTemplate) SpringUtil.getBeanByName("myJdbcTemplate");
+        System.out.println(myJdbcTemplate);
+        System.out.println(
+                myJdbcTemplate.jdbcTemplate.queryForList("show databases;")
+        );
+
 
     }
 
