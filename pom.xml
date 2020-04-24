@@ -16,6 +16,7 @@
         <module>read-properties</module>
         <module>hello-world</module>
         <module>daily-exercise</module>
+        <module>multi-datasource-jdbc-connect</module>
 
     </modules>
 

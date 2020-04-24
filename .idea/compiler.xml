@@ -9,6 +9,7 @@
         <module name="hello-world" />
         <module name="demo-log-aop" />
         <module name="aop-exercise" />
+        <module name="multi-datasource-jdbc-connect" />
         <module name="read-properties" />
         <module name="daily-exercise" />
       </profile>
@@ -19,6 +20,7 @@
       <module name="demo-log-aop" target="1.8" />
       <module name="hello-world" target="1.8" />
       <module name="hello-world (1)" target="1.8" />
+      <module name="multi-datasource-jdbc-connect" target="1.8" />
       <module name="read-properties" target="1.8" />
       <module name="spring-boot-demo" target="1.8" />
     </bytecodeTargetLevel>
@@ -30,6 +32,7 @@
       <module name="demo-log-aop" options="-parameters" />
       <module name="hello-world" options="-parameters" />
       <module name="hello-world (1)" options="-parameters" />
+      <module name="multi-datasource-jdbc-connect" options="-parameters" />
       <module name="read-properties" options="-parameters" />
     </option>
   </component>
