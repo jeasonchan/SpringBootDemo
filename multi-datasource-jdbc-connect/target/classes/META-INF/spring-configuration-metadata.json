@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "datasource1",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.jeasonchan.Config.DBConfig",
+      "sourceMethod": "dataSource1()"
+    },
+    {
+      "name": "datasource2",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.jeasonchan.Config.DBConfig",
+      "sourceMethod": "dataSource2()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
