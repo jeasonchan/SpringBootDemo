@@ -1,10 +1,12 @@
 package com.jeasonchan;
 
-import com.jeasonchan.DB.DBService1;
-import com.jeasonchan.DB.DBService2;
+import com.jeasonchan.dao.DBService1;
+import com.jeasonchan.dao.DBService2;
 import com.jeasonchan.util.SpringUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.sql.Connection;
 
 @SpringBootApplication
 public class Main {
@@ -21,6 +23,7 @@ public class Main {
         System.out.println("连接池2：");
         DBService2 dBService2 = (DBService2) SpringUtil.getBeanByName("dBService2");
         System.out.println(dBService2.getJdbcTemplate().queryForList(sql));
+
 
     }
 }
