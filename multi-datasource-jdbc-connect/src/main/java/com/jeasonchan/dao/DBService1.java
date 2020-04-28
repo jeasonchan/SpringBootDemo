@@ -27,10 +27,10 @@ public class DBService1 {
     private TransactionTemplate defaultTransactionTemplate;
 
     @Getter
-    private ThreadLocal<TransactionTemplate> transactionTemplateThreadLocal = new ThreadLocal<>();
+    private ThreadLocal<TransactionTemplate> transactionTemplateHolder = new ThreadLocal<>();
 
     public void setIsolatoinLevel(int isolatoinLevel) {
-        transactionTemplateThreadLocal.set(new TransactionTemplate(
+        transactionTemplateHolder.set(new TransactionTemplate(
                 this.dataSourceTransactionManager,
                 new TransactionDefinition() {
                     @Override
@@ -42,10 +42,18 @@ public class DBService1 {
     }
 
     public TransactionTemplate getCustomTransactionTemplate() {
-        if (null == this.transactionTemplateThreadLocal.get()) {
+        if (null == this.transactionTemplateHolder.get()) {
             setIsolatoinLevel(TransactionDefinition.ISOLATION_DEFAULT);
         }
-        return this.transactionTemplateThreadLocal.get();
+        return this.transactionTemplateHolder.get();
+    }
+
+
+    //简化的transactionTemplate的获取流程，向调用者隐藏TransactionTemplate
+    public TransactionTemplate setAndGetCustomTransactionTemplate(TransactionDefinition transactionDefinition) {
+        this.transactionTemplateHolder.set(new TransactionTemplate(dataSourceTransactionManager, transactionDefinition));
+        return this.transactionTemplateHolder.get();
+
     }
 
 
