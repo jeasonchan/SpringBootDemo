@@ -30,6 +30,7 @@ public class Controller {
                         continue;
                     }
 
+
                     if (currentValueRoot == mergeResult) {
                         rootValues.remove(eachRoot);
                         rootValues.add(currentValueRoot);
