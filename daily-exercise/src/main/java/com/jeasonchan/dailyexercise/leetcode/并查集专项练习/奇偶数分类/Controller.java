@@ -11,7 +11,9 @@ import java.util.Map;
 @RestController
 public class Controller {
 
+
     @RequestMapping(method = RequestMethod.POST, path = "/leetcode/UnionFindSet/{implType}")
+    @Log(extraValue = "注解上的入参，哈哈哈")
     public Map<String, Object> solve(@PathVariable("implType") String implType, @RequestBody List<Integer> values) {
 
         UnionFindSet unionFindSet = new UnionFindSet(values);
