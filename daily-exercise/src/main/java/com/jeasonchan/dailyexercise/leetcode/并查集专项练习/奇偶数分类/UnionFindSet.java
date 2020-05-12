@@ -12,6 +12,7 @@ import java.util.List;
  */
 public class UnionFindSet {
     public static int CAN_NOT_MERGE = -1;
+    public static int SAME_ROOT = -2;
 
 
     @Getter
@@ -70,7 +71,7 @@ public class UnionFindSet {
                 return value2Root;
             }
 
-            return value1Root;
+            return SAME_ROOT;
 
         }
 
